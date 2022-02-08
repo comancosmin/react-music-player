@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./song";
+@import "./player";
+@import "./library";
+@import "./nav";
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Pacifico&display=swap");
+
+body {
+  background-color: #f7f7f7;
+
+  h1,
+  h2,
+  h3,
+  p,
+  button {
+    color: #212121;
+    font-family: "Comfortaa", cursive;
+    font-weight: 200;
+  }
+
+  .App {
+    transition: all 0.5s ease;
+  }
+
+  .animation-play {
+    width: 20%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px rgb(68, 68, 68);
+    animation: spin 10s linear infinite;
+  }
+
+  .library-active {
+    margin-left: 20%;
+  }
+
+  *::selection {
+    color: #f7f7f7;
+    background-color: #212121;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    padding-top: 0rem;
+    img {
+      width: 60%;
+    }
+  }
+  .animation-play {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px rgb(68, 68, 68);
+    animation: spin 10s linear infinite;
+  }
+}
