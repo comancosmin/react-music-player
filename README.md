@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Images
+## Images -> live preview (react.cosmincoman.com)
 
 ![Screenshot_1](https://user-images.githubusercontent.com/24994281/153094506-eff06912-b352-49a4-b411-f6657aac20a3.jpg)
 ![Screenshot_2](https://user-images.githubusercontent.com/24994281/153094646-f68bd70a-08e5-4171-9947-6f76c3ede580.jpg)
