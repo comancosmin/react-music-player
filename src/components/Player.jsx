@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faAngleLeft,
-  faAngleRight,
-  faPause,
-  faVolumeDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import { playAudio } from "../util";
+import { FiRepeat } from "react-icons/fi";
+import { BsShuffle } from "react-icons/bs";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function Player({
   audioRef,
@@ -20,8 +17,6 @@ function Player({
   setCurrentSong,
   setSongs,
 }) {
-  //volume
-  const [activeVolume, setActiveVolume] = useState(false);
   //use effect - Update List
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
@@ -114,21 +109,21 @@ function Player({
         </div>
       </div>
       <div className="play-control">
-        <FontAwesomeIcon
+        <BsShuffle className="p-buttons" />
+        <IoIosArrowBack
           onClick={() => skipTrackHandler("skip-back")}
           className="skip-back"
-          icon={faAngleLeft}
         />
         <FontAwesomeIcon
           onClick={playSongHandler}
           className="play"
           icon={isPlaying ? faPause : faPlay} //daca nu este o iconita este cealalta
         />
-        <FontAwesomeIcon
+        <IoIosArrowForward
           onClick={() => skipTrackHandler("skip-forward")}
           className="skip-forward"
-          icon={faAngleRight}
         />
+        <FiRepeat className="p-buttons" />
       </div>
       {/* <div className="volume-control">
           <FontAwesomeIcon

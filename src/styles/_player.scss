@@ -75,6 +75,10 @@ input[type="range"]::-moz-range-thumb {
 //Media Query's
 
 @media screen and (max-width: 768px) {
+  .p-buttons {
+    font-size: 0.9rem !important;
+    opacity: 0.8;
+  }
   .time-control {
     width: 85% !important;
   }
@@ -82,7 +86,6 @@ input[type="range"]::-moz-range-thumb {
     padding-top: 2rem !important;
     width: 60% !important;
     svg {
-      font-size: 1.6rem !important;
       color: #212121;
     }
   }
@@ -114,4 +117,10 @@ input[type="range"].volume::-webkit-slider-thumb {
 
 input[type="range"].volume::-webkit-slider-thumb:active {
   transform: scale(1);
+}
+
+//shuffle and repeat buttons
+
+.p-buttons {
+  font-size: 0.9rem !important;
 }
