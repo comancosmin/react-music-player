@@ -1,0 +1,126 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    user-select: none; // bug fix - DOUBLE CLICK ISSUE solved
+  }
+
+  .time-control {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    input {
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    p {
+      width: 4rem;
+      padding: 0rem 1rem;
+    }
+  }
+  .play-control {
+    padding-top: 1.2rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    svg {
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+}
+
+.track {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animate-track {
+  background: lightgray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  pointer-events: none;
+}
+
+//Media Query's
+
+@media screen and (max-width: 768px) {
+  .p-buttons {
+    font-size: 0.9rem !important;
+    opacity: 0.8;
+  }
+  .time-control {
+    width: 85% !important;
+  }
+  .play-control {
+    padding-top: 2rem !important;
+    width: 60% !important;
+    svg {
+      color: #212121;
+    }
+  }
+}
+
+//input volume
+input[type="range"].volume {
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #999;
+  border-radius: 5px;
+  width: 22%;
+  height: 1px;
+  outline: 0;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  width: 17%;
+}
+input[type="range"].volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="range"].volume::-webkit-slider-thumb:active {
+  transform: scale(1);
+}
+
+//shuffle and repeat buttons
+
+.p-buttons {
+  font-size: 0.9rem !important;
+}

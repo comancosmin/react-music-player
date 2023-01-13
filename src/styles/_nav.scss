@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  min-height: 10vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 1px 1px 5px #21212120;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-weight: 900;
+    }
+  }
+  button {
+    padding: 0.5rem 0.55rem 0.5rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: solid 1px black;
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}
+
+.hamburger {
+  color: #212121;
+}
+
+//Media Query's
+
+@media screen and (max-width: 768px) {
+  nav {
+    .hamburger-react {
+      z-index: 2;
+    }
+  }
+}

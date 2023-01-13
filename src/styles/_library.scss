@@ -1,0 +1,95 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: #f7f7f7;
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  .library-sticky {
+    background-color: #ffff;
+    box-shadow: 1px 1px 5px #21212120;
+    top: 0;
+    position: sticky;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem 3rem;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  img {
+    width: 30%;
+    border-radius: 50%;
+  }
+  .library-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    h2 {
+      font-size: 1.1rem;
+      padding-bottom: 0.2rem;
+      color: rgb(70, 70, 70);
+    }
+    p {
+      font-size: 0.7rem;
+      color: rgb(100, 100, 100);
+    }
+  }
+  &:hover {
+    background-color: #21212120;
+  }
+}
+
+//Library scroll bar settings
+
+.library::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
+
+.library::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f7f7f7;
+}
+
+.library::-webkit-scrollbar-thumb {
+  background-color: #212121;
+  border: none;
+}
+
+.selected {
+  background-color: #21212120;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 100px 1px #2b2b2b20;
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+//Media Query's
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+    h1 {
+      font-size: 1.8rem;
+      padding-right: 4.5rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+}
